@@ -14,5 +14,14 @@ public class TestUser {
         user.add();
     }
 
+//    反射创建对象
+    @Test
+    public void test2() throws Exception {
+        Class<?> aClass = Class.forName("org.zufedfc.spring6.User");
+//        User user = (User) aClass.newInstance();
+        User user = (User) aClass.getConstructor().newInstance();
+        user.add();
+    }
+
 
 }

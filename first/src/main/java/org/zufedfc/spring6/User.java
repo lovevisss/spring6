@@ -11,4 +11,12 @@ public class User {
     public static void main(String[] args) {
 
     }
+
+    public User(){
+        System.out.println("User无参构造方法");
+    }
+
+
+
+
 }

@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="first" options="--add-modules java.base" />
+      <module name="first" options="" />
     </option>
   </component>
 </project>
