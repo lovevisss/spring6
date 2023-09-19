@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    user创建-->
+    <bean id="user" class="org.zufedfc.ioc.User">
+        <!--        <property name="name" value="zufedfc"/>-->
+    </bean>
+
+    <!--    接口获取-->
+    <bean id="userDao" class="org.zufedfc.ioc.UserImpl"></bean>
+    <bean id="personDao" class="org.zufedfc.ioc.PersonImpl"></bean>
+</beans>

@@ -6,4 +6,10 @@
     <bean id="user" class="org.zufedfc.spring6.User">
 <!--        <property name="name" value="zufedfc"/>-->
     </bean>
+
+<!--    接口获取-->
+    <bean id="userDao" class="org.zufedfc.spring6.UserDaoImpl"></bean>
+    <bean id="userService" class="org.zufedfc.spring6.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
 </beans>
