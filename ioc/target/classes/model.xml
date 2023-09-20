@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dept" class="Model.Department">
+        <property name="name" value="IT"></property>
+        <property name="employees">
+            <null></null>
+        </property>
+    </bean>
+
+    <bean id="employee" class="Model.Employee">
+        <property name="name" value="jack"></property>
+        <property name="age" value="34"></property>
+        <property name="department" ref="dept"></property>
+
+    </bean>
+
+    <bean id="employee2" class="Model.Employee">
+        <property name="name" value="jack"></property>
+        <property name="age" value="34"></property>
+        <property name="department">
+            <bean id="dept2" class="Model.Department">
+                <property name="name" value="security"></property>
+                <property name="employees">
+                    <null></null>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+<!--    级联赋值-->
+    <bean id="dept3" class="Model.Department">
+        <property name="name" value="security2"></property>
+        <property name="employees">
+            <null></null>
+        </property>
+    </bean>
+    <bean id="emp3" class="Model.Employee">
+
+        <property name="name" value="elon"></property>
+        <property name="age" value="55"></property>
+        <property name="department" ref="dept"></property>
+        <property name="department.name" value="ceshi"></property>
+    </bean>
+    
+</beans>

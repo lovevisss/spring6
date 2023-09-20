@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    book 基于构造器注入-->
+    <bean id="book" class="di.Book">
+        <constructor-arg name="name" value="CSS reveil"/>
+        <constructor-arg name="author" value="Cisco May"/>
+        <constructor-arg name="price" value="44"/>
+    </bean>
+</beans>

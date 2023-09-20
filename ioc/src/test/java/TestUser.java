@@ -1,3 +1,4 @@
+import Model.Employee;
 import di.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -45,5 +46,40 @@ public class TestUser {
         System.out.println(book.getPrice());
 
     }
+
+    @Test
+    public void testEmployee(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("model.xml");
+        Employee employee = (Employee) applicationContext.getBean("employee");
+        employee.run();
+
+    }
+
+    @Test
+    public void testEmployee2(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("model.xml");
+        Employee employee2 = (Employee) applicationContext.getBean("employee2");
+        employee2.run();
+    }
+
+    @Test
+    public void testEmployee3(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("model.xml");
+        Employee employee3 = (Employee) applicationContext.getBean("emp3");
+        employee3.run();
+
+    }
+
+    @Test
+    public void testEmployee4(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("arraystring.xml");
+        Employee employee4 = (Employee) applicationContext.getBean("employee");
+        employee4.run();
+
+    }
+
+
+
+    
 
 }
